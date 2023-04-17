@@ -12,11 +12,11 @@ This repository provides the official PyTorch implementation of the following co
 >
 
 ## Setup
-This code is tested with Python3.8, Pytorch == 1.11 and CUDA == 11.3, requiring the following dependencies:
+This code is tested with Python3.8, Pytorch >= 1.11 and CUDA >= 11.3, requiring the following dependencies:
 
-* timm == 0.4.9
-* lpips == 0.1.4
-* opencv-python == 4.6.0.66
+* timm = 0.4.9
+* lpips = 0.1.4
+* opencv-python = 4.6.0.66
 
 To setup a conda environment, please use the following instructions:
 ```
