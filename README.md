@@ -66,13 +66,13 @@ The used pre-trained vision models are detailed in Table 8 of our paper. Their c
 <tr><td align="left">ViT-B/16</td>
 <td align="center">Supervised</td>
 <td align="center">ImageNet-1k</td>
-<td align="center"><a href="xxx">Download</a></td>
+<td align="center"><a href="https://drive.google.com/file/d/1_cunej-ZSB58ngtOW62mh0GxOFoQvnjY/view?usp=sharing">Download</a></td>
 <td align="center"><tt>-</tt></td>
 </tr>
 <tr><td align="left">ViT-B/16</td>
 <td align="center">Supervised</td>
 <td align="center">ImageNet-22k</td>
-<td align="center"><a href="xxx">Download</a></td>
+<td align="center"><a href="https://drive.google.com/file/d/1zvIqdml4KVArPuWspoHKU7a6e0uAunF8/view?usp=sharing">Download</a></td>
 <td align="center"><tt>-</tt></td>
 </tr>
 <tr><td align="left">ViT-B/16</td>
