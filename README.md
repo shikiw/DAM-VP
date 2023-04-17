@@ -103,6 +103,13 @@ The used pre-trained vision models are detailed in Table 8 of our paper. Their c
 
 
 ## Meta Prompt Initialization
+The trained meta prompts are available at here.
+```
+```
+
+## Diversity-Aware Prompting
+```
+```
 
 ## Citation
 If you find this work useful for your research, please cite [our paper](https://arxiv.org/abs/2303.08138):
