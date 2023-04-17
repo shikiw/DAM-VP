@@ -103,8 +103,27 @@ The used pre-trained vision models are detailed in Table 8 of our paper. Their c
 
 
 ## Meta Prompt Initialization
-The trained meta prompts are available at here.
+The trained meta prompts are available at [here](xxx), you can directly use these checkpoints without meta training.
+To implement the meta training of visual prompts, you can refer to the following instructions.
+* For head-freezing/missing scenario, please run the command:
 ```
+cd meta-training/
+# if training on vit-b-1k
+python main_hf.py --base_dir /your/path/to/dataset/ --pretrained_model vit-b-1k --meta_lr 0.5 --update_lr 0.5 --update_step 4 --meta_step_size 0.5 --test_dataset oxford-flowers
+# if training on clip-vit-b
+python main_clip.py --base_dir /your/path/to/dataset/  --pretrained_model clip-vit-b --meta_lr 1.0 --update_lr 1.0 --update_step 4 --meta_step_size 0.5
+```
+* For head-tuning scenario, please run the command:
+```
+cd meta-training/
+# if training on vit-b-22k
+python main_ht.py --base_dir /your/path/to/dataset/ --pretrained_model vit-b-22k --meta_lr 1.0 --update_lr 1.0 --update_step 4 --meta_step_size 0.5 --weight_decay 1e-4  --test_dataset oxford-flowers
+# if training on swin-b-22k
+python main_ht.py --base_dir /your/path/to/dataset/ --pretrained_model swin-b-22k --meta_lr 0.5 --update_lr 0.5 --update_step 4 --meta_step_size 0.5 --weight_decay 1e-4
+# if training on moco-v3-b-1k
+python main_ht.py --base_dir /your/path/to/dataset/ --pretrained_model moco-v3-b-1k --meta_lr 0.5 --update_lr 0.5 --update_step 4 --meta_step_size 0.5 --weight_decay 1e-4
+# if training on resnet50-1k
+python main_ht.py --base_dir /your/path/to/dataset/ --pretrained_model resnet50-1k --meta_lr 0.5 --update_lr 0.5 --update_step 4 --meta_step_size 0.5 --weight_decay 1e-4
 ```
 
 ## Diversity-Aware Prompting
