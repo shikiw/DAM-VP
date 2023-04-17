@@ -30,7 +30,7 @@ The Fine-Grained Visual Classification (FGVC) datasets can be downloaded in [VPT
 ```
 python vtab_prep.py
 ```
-If more download tips about VTAB-1k are expected, you can refer to [VTAB_SETUP.md](https://github.com/KMnP/vpt/blob/main/VTAB_SETUP.md).
+For more tips about how to download VTAB-1k, please refer to [VTAB_SETUP.md](https://github.com/KMnP/vpt/blob/main/VTAB_SETUP.md).
 
 The overall directory structure should be:
 ```
