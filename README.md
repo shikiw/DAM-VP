@@ -71,7 +71,7 @@ The used pre-trained vision models are detailed in Table 8 of our paper. Their c
 </tr>
 <tr><td align="left">ViT-B/16</td>
 <td align="center">Supervised</td>
-<td align="center">ImageNet-22k/td>
+<td align="center">ImageNet-22k</td>
 <td align="center"><a href="xxx">Download</a></td>
 <td align="center"><tt>-</tt></td>
 </tr>
@@ -83,7 +83,7 @@ The used pre-trained vision models are detailed in Table 8 of our paper. Their c
 </tr>
 <tr><td align="left">Swin-B</td>
 <td align="center">Supervised</td>
-<td align="center">ImageNet-22k/td>
+<td align="center">ImageNet-22k</td>
 <td align="center"><a href="https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22k.pth">Download</a></td>
 <td align="center"><tt>bf9cc1</tt></td>
 </tr>
@@ -96,7 +96,7 @@ The used pre-trained vision models are detailed in Table 8 of our paper. Their c
 <tr><td align="left">ResNet-50</td>
 <td align="center">Supervised</td>
 <td align="center">ImageNet-1k</td>
-<td align="center"><a href="https://pytorch.org/vision/stable/models.html">link</a></td>
+<td align="center"><a href="https://pytorch.org/vision/stable/models.html">Download</a></td>
 <td align="center"><tt>-</tt></td>
 </tr>
 </tbody></table>
@@ -105,7 +105,7 @@ The used pre-trained vision models are detailed in Table 8 of our paper. Their c
 ## Meta Prompt Initialization
 
 ## Citation
-If you find this work useful for your research, please cite our [paper](https://arxiv.org/abs/2203.04041):
+If you find this work useful for your research, please cite [our paper](https://arxiv.org/abs/2303.08138):
 ```
 @inproceedings{huang2023damvp,
   title={Diversity-Aware Meta Visual Prompting},
