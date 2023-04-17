@@ -11,3 +11,15 @@ This repository provides the official PyTorch implementation of the following co
 > <sup>1</sup>University of Science and Technology of China, <sup>2</sup>Microsoft Cloud AI, <sup>3</sup>Wormpex AI Research <br>
 >
 
+## Setup
+This code is tested with Python3.8, Pytorch == 1.11 and CUDA == 11.3, requiring the following dependencies:
+
+* timm == 0.4.9
+* lpips == 0.1.4
+* opencv-python == 4.6.0.66
+
+To setup a conda environment, please follow the bash instructions as below:
+```
+conda env create -f environment.yml
+conda activate dam_vp
+```
