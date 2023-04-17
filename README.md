@@ -18,7 +18,7 @@ This code is tested with Python3.8, Pytorch == 1.11 and CUDA == 11.3, requiring 
 * lpips == 0.1.4
 * opencv-python == 4.6.0.66
 
-To setup a conda environment, please use the following bash instructions:
+To setup a conda environment, please use the following instructions:
 ```
 conda env create -f environment.yml
 conda activate dam_vp
