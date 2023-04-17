@@ -1,4 +1,4 @@
-name: gpu4_env
+name: dam_vp
 channels:
   - pytorch
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free
@@ -119,5 +119,4 @@ dependencies:
     - termcolor==1.1.0
     - timm==0.4.9
     - wcwidth==0.2.5
-prefix: /public/huangqidong/anaconda3/envs/gpu4_env
 
