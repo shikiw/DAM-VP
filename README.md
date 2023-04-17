@@ -90,7 +90,7 @@ The used pre-trained vision models are detailed in Table 8 of our paper. Their c
 <tr><td align="left">ViT-B/16</td>
 <td align="center">MoCo v3</td>
 <td align="center">ImageNet-1k</td>
-<td align="center"><a href="xxx">Download</a></td>
+<td align="center"><a href="https://drive.google.com/file/d/1w_7CVKKlRq_VT-M6-aYFu1UlrjMxgXGA/view?usp=sharing">Download</a></td>
 <td align="center"><tt>-</tt></td>
 </tr>
 <tr><td align="left">ResNet-50</td>
