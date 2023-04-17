@@ -11,7 +11,7 @@ This repository provides the official PyTorch implementation of the following co
 > <sup>1</sup>University of Science and Technology of China, <sup>2</sup>Microsoft Cloud AI, <sup>3</sup>Wormpex AI Research <br>
 >
 
-## Setup
+## Environment Setup
 This code is tested with Python3.8, Pytorch >= 1.11 and CUDA >= 11.3, requiring the following dependencies:
 
 * timm = 0.4.9
@@ -22,4 +22,30 @@ To setup a conda environment, please use the following instructions:
 ```
 conda env create -f environment.yml
 conda activate dam_vp
+```
+
+## Dataset Preparation
+The Fine-Grained Visual Classification (FGVC) datasets can be downloaded in [VPT repo](https://github.com/KMnP/vpt). The Fru92 and Veg200 datasets can be downloaded at [VegFru](https://github.com/ustc-vim/vegfru). Other datasets are all avaliable at torchvision. 
+* (Optional) To prepare the datasets of [Visual Task Adaptation Benchmark (VTAB)](https://google-research.github.io/task_adaptation/) benchmark, you can install the tensorflow package as in [VPT repo](https://github.com/KMnP/vpt) and run the command below:
+```
+python vtab_prep.py
+```
+If expecting more important notes about how to download VTAB-1k, you can refer to [VTAB_SETUP.md](https://github.com/KMnP/vpt/blob/main/VTAB_SETUP.md).
+The overall directory structure should be:
+```
+│DAM-VP/
+├──data/
+│   ├──FGVC/
+│   │   ├──CUB_200_2011/
+│   │   ├──OxfordFlower/
+│   │   ├──Stanford-cars/
+│   │   ├──Stanford-dogs/
+│   │   ├──nabirds/
+│   ├──VTAB/
+│   │   ├──.......
+│   ├──finegrained_dataset/
+│   │   ├──vegfru-dataset/
+│   ├──torchvision_dataset/
+│   │   ├──.......
+├──.......
 ```
