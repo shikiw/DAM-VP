@@ -28,7 +28,7 @@ conda activate dam_vp
 The Fine-Grained Visual Classification (FGVC) datasets can be downloaded in [VPT repo](https://github.com/KMnP/vpt). The Fru92 and Veg200 datasets can be downloaded at [VegFru](https://github.com/ustc-vim/vegfru). Other datasets are all avaliable at torchvision. 
 * (Optional) To prepare the datasets of [Visual Task Adaptation Benchmark (VTAB)](https://google-research.github.io/task_adaptation/) benchmark, you can install the tensorflow package as in [VPT repo](https://github.com/KMnP/vpt) and run the command below:
 ```
-python vtab_prep.py
+python data_utils/vtab_prep.py
 ```
 For more tips about how to download VTAB-1k, please refer to [VTAB_SETUP.md](https://github.com/KMnP/vpt/blob/main/VTAB_SETUP.md).
 
