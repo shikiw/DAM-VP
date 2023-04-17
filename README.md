@@ -103,31 +103,50 @@ The used pre-trained vision models are detailed in Table 8 of our paper. Their c
 
 
 ## Meta Prompt Initialization
-The trained meta prompts are available at [here](xxx), you can directly use these checkpoints without meta training.
-To implement the meta training of visual prompts, you can refer to the following instructions.
+The trained meta prompts are available at [here](https://drive.google.com/drive/folders/1X0ZgnQlZw57iqSxORS_n4A8JbxQVfd3q?usp=sharing), you can directly download these checkpoints and store them at ```./meta-training/checkpoints/```.
+Also, you can implement the meta training of visual prompts by yourself. The following instructions will be helpful.
 * For head-freezing/missing scenario, please run the command:
 ```
 cd meta-training/
-# if training on vit-b-1k
+# if prompting on vit-b-1k
 python main_hf.py --base_dir /your/path/to/dataset/ --pretrained_model vit-b-1k --meta_lr 0.5 --update_lr 0.5 --update_step 4 --meta_step_size 0.5 --test_dataset oxford-flowers
-# if training on clip-vit-b
+# if prompting on clip-vit-b
 python main_clip.py --base_dir /your/path/to/dataset/  --pretrained_model clip-vit-b --meta_lr 1.0 --update_lr 1.0 --update_step 4 --meta_step_size 0.5
 ```
 * For head-tuning scenario, please run the command:
 ```
 cd meta-training/
-# if training on vit-b-22k
+# if prompting on vit-b-22k
 python main_ht.py --base_dir /your/path/to/dataset/ --pretrained_model vit-b-22k --meta_lr 1.0 --update_lr 1.0 --update_step 4 --meta_step_size 0.5 --weight_decay 1e-4  --test_dataset oxford-flowers
-# if training on swin-b-22k
+# if prompting on swin-b-22k
 python main_ht.py --base_dir /your/path/to/dataset/ --pretrained_model swin-b-22k --meta_lr 0.5 --update_lr 0.5 --update_step 4 --meta_step_size 0.5 --weight_decay 1e-4
-# if training on moco-v3-b-1k
+# if prompting on moco-v3-b-1k
 python main_ht.py --base_dir /your/path/to/dataset/ --pretrained_model moco-v3-b-1k --meta_lr 0.5 --update_lr 0.5 --update_step 4 --meta_step_size 0.5 --weight_decay 1e-4
-# if training on resnet50-1k
+# if prompting on resnet50-1k
 python main_ht.py --base_dir /your/path/to/dataset/ --pretrained_model resnet50-1k --meta_lr 0.5 --update_lr 0.5 --update_step 4 --meta_step_size 0.5 --weight_decay 1e-4
 ```
 
 ## Diversity-Aware Prompting
+With the meta trained visual prompt, we can adapt pretrained vision models to unseen vision datasets. The hyper-parameter configurations can be found in Table 13 and Table 14 of our paper. 
+* For head-freezing/missing scenario, please run the command:
 ```
+cd task_adapting/
+# if prompting on vit-b-1k
+python main.py --base_dir /your/path/to/dataset/ --pretrained_model vit-b-1k --adapt_method prompt_wo_head --test_dataset /select/one/dataset/ --epochs 50 --lr /learning/rate/ --weight_decay /weight/decay/rate/ --checkpoint_dir ../meta-training/checkpoints/vit-b-1k-wo-head.pth
+# if prompting on clip-vit-b
+python main_clip.py --base_dir /your/path/to/dataset/ --pretrained_model clip-vit-b --adapt_method prompt_wo_head --test_dataset /select/one/dataset/ --epochs 50 --lr /learning/rate/ --weight_decay /weight/decay/rate/ --checkpoint_dir ../meta-training/checkpoints/clip-vit-b-wo-head.pth
+```
+* For head-tuning scenario, please run the command:
+```
+cd task_adapting/
+# if prompting on vit-b-22k
+python main.py --base_dir /your/path/to/dataset/ --pretrained_model vit-b-22k --adapt_method ours_with_head --test_dataset /select/one/dataset/ --epochs 50 --lr /learning/rate/ --weight_decay /weight/decay/rate/ --checkpoint_dir ../meta-training/checkpoints/vit-b-22k-w-head.pth
+# if prompting on swin-b-22k
+python main.py --base_dir /your/path/to/dataset/ --pretrained_model swin-b-22k --adapt_method ours_with_head --test_dataset /select/one/dataset/ --epochs 50 --lr /learning/rate/ --weight_decay /weight/decay/rate/ --checkpoint_dir ../meta-training/checkpoints/swin-b-22k-w-head.pth
+# if prompting on moco-v3-b-1k
+python main.py --base_dir /your/path/to/dataset/ --pretrained_model moco-v3-b-1k --adapt_method ours_with_head --test_dataset /select/one/dataset/ --epochs 50 --lr /learning/rate/ --weight_decay /weight/decay/rate/ --checkpoint_dir ../meta-training/checkpoints/moco-v3-b-1k-w-head.pth
+# if prompting on resnet50-1k
+python main.py --base_dir /your/path/to/dataset/ --pretrained_model resnet50-1k --adapt_method ours_with_head --test_dataset /select/one/dataset/ --epochs 50 --lr /learning/rate/ --weight_decay /weight/decay/rate/ --checkpoint_dir ../meta-training/checkpoints/resnet50-1k-w-head.pth
 ```
 
 ## Citation
