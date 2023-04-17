@@ -50,3 +50,71 @@ The overall directory structure should be:
 │   │   ├──.......
 ├──.......
 ```
+
+## Pre-trained Model Preparation
+The used pre-trained vision models are detailed in Table 8 of our paper. Their checkpoints can be downloaded here:
+
+<table><tbody>
+<!-- START TABLE -->
+<!-- TABLE HEADER -->
+<th valign="bottom">Backbone</th>
+<th valign="bottom">Pre-trained Objective</th>
+<th valign="bottom">Pre-trained Dataset</th>
+<th valign="bottom">Download</th>
+<th valign="bottom">md5sum</th>
+<!-- TABLE BODY -->
+<tr><td align="left">ViT-B/16</td>
+<td align="center">Supervised</td>
+<td align="center">ImageNet-1k</td>
+<td align="center"><a href="xxx">Download</a></td>
+<td align="center"><tt>-</tt></td>
+</tr>
+<tr><td align="left">ViT-B/16</td>
+<td align="center">Supervised</td>
+<td align="center">ImageNet-22k/td>
+<td align="center"><a href="xxx">Download</a></td>
+<td align="center"><tt>-</tt></td>
+</tr>
+<tr><td align="left">ViT-B/16</td>
+<td align="center">CLIP</td>
+<td align="center">400M Web Data</td>
+<td align="center"><a href="https://openai.com/research/clip">Download</a></td>
+<td align="center"><tt>-</tt></td>
+</tr>
+<tr><td align="left">Swin-B</td>
+<td align="center">Supervised</td>
+<td align="center">ImageNet-22k/td>
+<td align="center"><a href="https://github.com/SwinTransformer/storage/releases/download/v1.0.0/swin_base_patch4_window7_224_22k.pth">Download</a></td>
+<td align="center"><tt>bf9cc1</tt></td>
+</tr>
+<tr><td align="left">ViT-B/16</td>
+<td align="center">MoCo v3</td>
+<td align="center">ImageNet-1k</td>
+<td align="center"><a href="xxx">Download</a></td>
+<td align="center"><tt>-</tt></td>
+</tr>
+<tr><td align="left">ResNet-50</td>
+<td align="center">Supervised</td>
+<td align="center">ImageNet-1k</td>
+<td align="center"><a href="https://pytorch.org/vision/stable/models.html">link</a></td>
+<td align="center"><tt>-</tt></td>
+</tr>
+</tbody></table>
+
+
+## Meta Prompt Initialization
+
+## Citation
+If you find this work useful for your research, please cite our [paper](https://arxiv.org/abs/2203.04041):
+```
+@inproceedings{huang2023damvp,
+  title={Diversity-Aware Meta Visual Prompting},
+  author={Qidong Huang and Xiaoyi Dong and Dongdong Chen and Weiming Zhang and Feifei Wang and Gang Hua and Nenghai Yu},
+  journal={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2023}
+}
+```
+
+## License
+The code is released under MIT License (see LICENSE file for details).
+
