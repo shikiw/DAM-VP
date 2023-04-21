@@ -149,6 +149,9 @@ python main.py --base_dir /your/path/to/dataset/ --pretrained_model moco-v3-b-1k
 python main.py --base_dir /your/path/to/dataset/ --pretrained_model resnet50-1k --adapt_method ours_with_head --test_dataset /select/one/dataset/ --epochs 50 --lr /learning/rate/ --weight_decay /weight/decay/rate/ --checkpoint_dir ../meta-training/checkpoints/resnet50-1k-w-head.pth
 ```
 
+## Acknowledgement
+This repo is partially based on [VP](https://github.com/hjbahng/visual_prompting) and [VPT](https://github.com/KMnP/vpt). Thanks for their impressive works!
+
 ## Citation
 If you find this work useful for your research, please cite [our paper](https://arxiv.org/abs/2303.08138):
 ```
