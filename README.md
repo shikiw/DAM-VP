@@ -20,7 +20,7 @@ This code is tested with Python3.8, Pytorch = 1.11 and CUDA = 11.3, requiring th
 
 To setup a conda environment, please use the following instructions:
 ```
-conda env create -f environment.yml
+conda env create -f environment.yaml
 conda activate dam_vp
 ```
 
