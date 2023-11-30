@@ -1,7 +1,7 @@
 # Diversity-Aware Meta Visual Prompting (CVPR 2023)
 This repository provides the official PyTorch implementation of the following conference paper: 
 > [**Diversity-Aware Meta Visual Prompting (CVPR 2023)**](https://arxiv.org/abs/2303.08138) <br>
-> [Qidong Huang](http://home.ustc.edu.cn/~hqd0037/)<sup>1</sup>, 
+> [Qidong Huang](https://shikiw.github.io/)<sup>1</sup>, 
 > [Xiaoyi Dong](https://scholar.google.com/citations?user=FscToE0AAAAJ&hl=en)<sup>1</sup>, 
 > [Dongdong Chen](https://www.dongdongchen.bid/)<sup>2</sup>, 
 > [Weiming Zhang](http://staff.ustc.edu.cn/~zhangwm/index.html)<sup>1</sup>, 
